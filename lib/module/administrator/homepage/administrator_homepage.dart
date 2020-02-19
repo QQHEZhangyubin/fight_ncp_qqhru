@@ -6,6 +6,7 @@ import 'package:data_plugin/utils/dialog_util.dart';
 import 'package:fight_ncp_qqhru/models/index.dart';
 import 'package:fight_ncp_qqhru/module/administrator/homepage/administrator_homepage_presenter.dart';
 import 'package:fight_ncp_qqhru/module/administrator/only_text_public/OnlyTextPublic.dart';
+import 'package:fight_ncp_qqhru/module/administrator/text_and_survey/textandsurvey.dart';
 import 'package:fight_ncp_qqhru/utils/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -160,11 +161,15 @@ class _AdministratorHomePageState extends State<AdministratorHomePage> implement
                     },
                   ),
                         //TODO:接着做，完成自定义发布调查卷功能
-//                  SimpleDialogOption(
-//                    child: Text('发布调查卷'),
-//                    onPressed: (){
-//                    },
-//                  ),
+                  SimpleDialogOption(
+                    child: Text('发布调查卷'),
+                    onPressed: (){
+                        Navigator.pop(context);
+                        Navigator.push(context, new MaterialPageRoute(builder: (context){
+                          return new TextAndSurvey(initatorid: _initator,);
+                        }));
+                    },
+                  ),
                 ],
               );
             });

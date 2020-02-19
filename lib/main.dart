@@ -1,6 +1,8 @@
 import 'package:data_plugin/bmob/bmob.dart';
 import 'package:fight_ncp_qqhru/firstpage.dart';
 import 'package:fight_ncp_qqhru/injection/dependency_injection.dart';
+import 'package:fight_ncp_qqhru/module/administrator/designproblem/DesignProblem.dart';
+import 'package:fight_ncp_qqhru/module/administrator/designproblem/Single.dart';
 import 'package:fight_ncp_qqhru/module/administrator/homepage/administrator_homepage.dart';
 import 'package:fight_ncp_qqhru/module/administrator/login/login_view.dart';
 import 'package:fight_ncp_qqhru/module/contacts/contact_view.dart';
@@ -48,6 +50,8 @@ class MyApp extends StatelessWidget {
 //      home: Student_LoginView(),
 //        home: Test1(),
       home: FirstPage(),
+//        home: DesignProblemPage(),
+//        home: SinglePage(),
       routes: <String,WidgetBuilder>{
         Constant.administrator_homepage:(context) => new AdministratorHomePage(),
         Constant.text_public_page :(context) => new OnlyTextPublic(),

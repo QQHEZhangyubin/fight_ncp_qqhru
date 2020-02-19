@@ -161,7 +161,7 @@ class _StuProblemPageState extends State<StuProblemPage> {
   void initState() {
     num  survey_id = _surveyid;
     BmobQuery query = new BmobQuery();
-    query.queryObjectsByTableName('survey_content').then((data) {
+    query.queryObjectsByTableName('Survey_content').then((data) {
       List<Survey_content> survercontents = data.map((i) => Survey_content.fromJson(i)).toList();
       for(int i =0;i<survercontents.length;i++){
         if(survercontents[i].ref_survey_id == survey_id){

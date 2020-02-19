@@ -161,7 +161,7 @@ class _OutPeoplePageState extends State<OutPeoplePage>{
       String survey_time = Survey.fromJson(data).createdAt;
 
       print(survey_id);
-      query.queryObjectsByTableName('survey_content').then((value){
+      query.queryObjectsByTableName('Survey_content').then((value){
         List<Survey_content> survercontents = value.map((i) => Survey_content.fromJson(i)).toList();
         for(int i =0;i<survercontents.length;i++){
           if(survercontents[i].ref_survey_id == survey_id){

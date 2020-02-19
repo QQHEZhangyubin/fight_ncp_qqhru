@@ -12,7 +12,7 @@ class Survey_content extends BmobObject {
     String option1;
     String option2;
     String option3;
-    String option4;
+    String option4 ;
     String option5;
     String option6;
     String problem_content;
